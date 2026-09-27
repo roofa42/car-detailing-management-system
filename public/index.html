@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="نظام إدارة محل تنظيف وتلميع والعناية بالسيارات" />
+  <title>لمعة | إدارة مركز العناية بالسيارات</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">✦</span><div><strong>لمعة</strong><small>إدارة العناية بالسيارات</small></div></div>
+      <nav>
+        <a class="active" href="#dashboard">لوحة التحكم</a>
+        <a href="#reception">استقبال سيارة</a>
+        <a href="#customers">الزبائن</a>
+        <a href="#cars">السيارات</a>
+        <a href="#work-orders">أوامر العمل</a>
+        <a href="#appointments">المواعيد</a>
+        <a href="#services">الخدمات والباقات</a>
+        <a href="#inventory">المخزون</a>
+        <a href="#finance">المالية والتقارير</a>
+        <a href="#settings">الإعدادات</a>
+      </nav>
+      <div class="sidebar-footer">الإصدار 1.0.0<br><span>الدينار الجزائري (دج)</span></div>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><button class="mobile-menu" aria-label="القائمة">☰</button><div><p class="eyebrow">الأحد، 27 سبتمبر 2026</p><h1>صباح الخير، مدير المحل 👋</h1></div><div class="top-actions"><button class="icon-btn">🔔<i></i></button><button class="avatar">م</button></div></header>
+      <section id="dashboard" class="page">
+        <div class="quick-actions"><button onclick="location.hash='reception'">🚗 استقبال سيارة</button><button onclick="location.hash='customers'">＋ زبون جديد</button><button onclick="location.hash='appointments'">📅 حجز موعد</button><button onclick="location.hash='finance'">💸 تسجيل مصروف</button></div>
+        <div class="stats-grid"><article class="stat-card"><span>مداخيل اليوم</span><strong>0 دج</strong><small class="positive">لا توجد عمليات بعد</small></article><article class="stat-card"><span>صافي الربح</span><strong>0 دج</strong><small>بعد خصم المصاريف</small></article><article class="stat-card"><span>سيارات اليوم</span><strong>0</strong><small>سيارة مستقبلة</small></article><article class="stat-card"><span>داخل المحل</span><strong>0</strong><small>تحتاج إلى متابعة</small></article></div>
+        <div class="content-grid"><article class="panel chart-panel"><div class="panel-heading"><div><h2>نظرة مالية</h2><p>المداخيل والمصاريف خلال آخر 7 أيام</p></div><select><option>هذا الأسبوع</option><option>هذا الشهر</option></select></div><div class="empty-chart"><span>📊</span><p>ستظهر البيانات هنا بعد تسجيل أول عملية مالية</p></div></article><article class="panel"><div class="panel-heading"><div><h2>حالة السيارات</h2><p>الموجودة حاليًا في المحل</p></div><a href="#work-orders">عرض الكل</a></div><div class="empty-state"><span>🚘</span><p>لا توجد سيارات قيد الخدمة</p><small>ابدأ باستقبال سيارة جديدة</small></div></article></div>
+        <div class="content-grid"><article class="panel"><div class="panel-heading"><div><h2>آخر العمليات المالية</h2><p>أحدث المداخيل والمصاريف</p></div></div><div class="empty-state compact"><span>🧾</span><p>لا توجد عمليات مسجلة</p></div></article><article class="panel"><div class="panel-heading"><div><h2>الخدمات الأكثر طلبًا</h2><p>حسب عدد العمليات</p></div></div><div class="empty-state compact"><span>✨</span><p>ستظهر الإحصائيات بعد تسجيل الخدمات</p></div></article></div>
+      </section>
+      <section id="reception" class="page hidden"><div class="section-title"><div><p class="eyebrow">عملية جديدة</p><h2>استقبال سيارة جديدة</h2></div><button class="primary">حفظ أمر العمل</button></div><div class="form-panel"><div class="form-grid"><label>الزبون<select><option>اختر زبونًا</option></select></label><label>السيارة<select><option>اختر سيارة</option></select></label><label>وقت الدخول<input type="datetime-local"></label><label>قراءة العداد<input type="number" placeholder="مثال: 85000"></label><label>مستوى الوقود<select><option>نصف الخزان</option><option>فارغ</option><option>ممتلئ</option></select></label><label>السعر المتوقع<input type="number" placeholder="دج"></label><label class="full">الخدمات المطلوبة<textarea placeholder="اختر الخدمات أو اكتب ملاحظاتك"></textarea></label><label class="full">الأضرار والملاحظات<textarea placeholder="سجّل الخدوش والأغراض الموجودة داخل السيارة"></textarea></label></div></div></section>
+      <section id="customers" class="page hidden"><div class="section-title"><div><p class="eyebrow">قاعدة البيانات</p><h2>الزبائن</h2></div><button class="primary">＋ إضافة زبون</button></div><div class="toolbar"><input placeholder="ابحث بالاسم أو رقم الهاتف..."/><button>بحث</button></div><div class="empty-large"><span>👥</span><h3>لا يوجد زبائن بعد</h3><p>أضف أول زبون لبدء إدارة الزيارات والسيارات.</p></div></section>
+      <section id="work-orders" class="page hidden"><div class="section-title"><div><p class="eyebrow">المتابعة اليومية</p><h2>مخطط حالة السيارة</h2></div></div><div class="status-columns"><div><h3>🟡 في الانتظار <b>0</b></h3><div class="dropzone">لا توجد سيارات</div></div><div><h3>🔵 قيد العمل <b>0</b></h3><div class="dropzone">لا توجد سيارات</div></div><div><h3>🟢 جاهزة للتسليم <b>0</b></h3><div class="dropzone">لا توجد سيارات</div></div></div></section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
